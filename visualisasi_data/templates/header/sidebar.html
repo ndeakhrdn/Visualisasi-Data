@@ -1,0 +1,36 @@
+<div class="form-group">
+	<div class="col-md-3">
+		<label>Chart Types</label>
+	</div>
+	<div class="col-md-9">
+		
+		
+	<select class="form-control" onchange="showCars(this.value)"> 
+
+	<option>Select Chart</option>
+		<option>Line</option>
+		<option>Bar</option>
+		<option>Pie</option>
+		<option>Line</option>
+		<option>Line</option>
+		<option>Line</option>
+	</select>
+	</div>
+</div><br><br>
+
+<div class="form-group">
+	<div class="col-md-3">
+		<label>Fakulti </label>
+	</div>
+	<div class="col-md-9">
+	<select class="form-control"> 
+	<option>Select Fakulti</option>
+	{% for fak in fakulti %}
+		<option>{{ fak }}</option>
+	{% endfor %}
+	</select>
+	</div>
+</div><br>
+
+
+
