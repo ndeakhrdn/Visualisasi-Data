@@ -2,6 +2,19 @@ from django.db import models
 
 # Create your models here.
 
+# ---------------SERIALIZER-----------------
+from datetime import datetime
+
+class Comment(object):
+    def __init__(self, email, content, created=None):
+        self.email = email
+        self.content = content
+        self.created = created or datetime.now()
+
+comment = Comment(email='leila@example.com', content='foo bar')
+
+#---------------------------------------------
+
 class Person(models.Model):
 	name = models.CharField(max_length=30)
 	email = models.EmailField(blank=True)
